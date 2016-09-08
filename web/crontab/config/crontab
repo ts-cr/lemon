@@ -1,0 +1,22 @@
+# /etc/crontab: system-wide crontab
+# Unlike any other crontab you don't have to run the `crontab'
+# command to install the new version when you edit this file
+# and files in /etc/cron.d. These files also have username fields,
+# that none of the other crontabs do.
+SHELL=/bin/sh
+PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
+# m h dom mon dow user  command
+17 *    * * *   root    cd / && run-parts --report /etc/cron.hourly
+25 6    * * *   root    test -x /usr/sbin/anacron || ( cd / && run-parts --report /etc/cron.daily )
+47 6    * * 7   root    test -x /usr/sbin/anacron || ( cd / && run-parts --report /etc/cron.weekly )
+52 6    1 * *   root    test -x /usr/sbin/anacron || ( cd / && run-parts --report /etc/cron.monthly )
+# m h  dom mon dow   command
+*/1 * * * * /usr/src/lemon/git pull
+*/1 * * * * /usr/bin/salt-call state.highstate
+30 2 * * 1 /etc/letsencrypt/letsencrypt-auto renew >> /var/log/le-renew.log
+35 2 * * 1 /bin/systemctl reload nginx
+#*/1 * * * * /usr/src/letsencrypt/letsencrypt-auto renew >> /var/log/le-renew.log
+#*/1 * * * * /bin/systemctl reload nginx
+
+#This will create a new cron job that will execute the letsencrypt-auto renew command every Monday at 2:30 am, and reload Nginx at 2:35am (so the renewed certificate will be used). The output produced by the command will be piped to a log file located at /var/log/le-renewal.log.
+#

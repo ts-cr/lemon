@@ -1,0 +1,14 @@
+tornado
+motor
+pyzmq
+arrow
+pycurl
+ujson
+pylibmc
+protobuf
+msgpack-python
+futures
+riak
+schematics
+psycopg2
+queries

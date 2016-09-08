@@ -1,0 +1,7 @@
+<include>
+  <extension name="munico_ivr">
+    <condition field="destination_number" expression="^5013$">
+      <action application="lua" data="munico_avmd.lua"/> 
+    </condition>
+  </extension>
+</include>

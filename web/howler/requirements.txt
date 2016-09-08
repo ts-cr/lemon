@@ -1,0 +1,12 @@
+tornado
+motor
+riak
+pyzmq
+arrow
+schematics
+pycurl
+ujson
+msgpack-python
+requests
+pylibmc
+toro

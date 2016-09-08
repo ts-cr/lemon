@@ -1,0 +1,7 @@
+<include>
+  <extension name="radio_ivr">
+    <condition field="destination_number" expression="^5012$">
+      <action application="lua" data="radio_avmd.lua"/> 
+    </condition>
+  </extension>
+</include>

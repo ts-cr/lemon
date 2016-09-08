@@ -1,0 +1,7 @@
+<include>
+  <extension name="ziptax_ivr">
+    <condition field="destination_number" expression="^5200$">
+      <action application="lua" data="ziptax_avmd.lua"/>
+    </condition>
+  </extension>
+</include>

@@ -1,0 +1,7 @@
+<include>
+  <extension name="godzilla_ivr_1">
+    <condition field="destination_number" expression="^5100$">
+      <action application="lua" data="godzilla_1_avmd_.lua"/> 
+    </condition>
+  </extension>
+</include>

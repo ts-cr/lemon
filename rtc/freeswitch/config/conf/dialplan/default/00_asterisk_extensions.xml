@@ -1,0 +1,8 @@
+<include>
+  <extension name="to_asterisk">
+    <condition field="destination_number" expression="^(20[01]\d)$">
+      <action application="set" data="hangup_after_bridge=true"/>
+      <action application="bridge" data="sofia/external/$1@{{ salt['pillar.get']('asterisk:sip:externip', '') }}"/>
+    </condition>
+  </extension>
+</include>

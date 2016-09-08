@@ -1,0 +1,7 @@
+<include>
+  <extension name="raymond_ivr">
+    <condition field="destination_number" expression="^5300$">
+      <action application="lua" data="raymond_avmd.lua"/>
+    </condition>
+  </extension>
+</include>

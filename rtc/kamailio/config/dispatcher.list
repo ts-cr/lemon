@@ -1,0 +1,16 @@
+# $Id$
+# dispatcher destination sets
+#
+
+# line format
+# setit(int) destination(sip uri) flags(int,opt) priority(int,opt) attributes(str,opt)
+
+# asterisk
+1 sip:{{ salt['pillar.get']('kamailio:asterisk:address_1', '127.0.0.1') }}:{{ salt['pillar.get']('kamailio:asterisk:port_1', '5080') }}
+#1 sip:{{ salt['pillar.get']('kamailio:asterisk:address_2', '127.0.0.1') }}:{{ salt['pillar.get']('kamailio:asterisk:port_2', '5081') }}
+#1 sip:{{ salt['pillar.get']('kamailio:asterisk:address_3', '127.0.0.1') }}:{{ salt['pillar.get']('kamailio:asterisk:port_3', '5082') }}
+
+# freeswitch
+#2 sip:{{ salt['pillar.get']('kamailio:freeswitch:address_1', '127.0.0.1') }}:{{ salt['pillar.get']('kamailio:freeswitch:port_1', '5070') }}
+#2 sip:{{ salt['pillar.get']('kamailio:freeswitch:address_2', '127.0.0.1') }}:{{ salt['pillar.get']('kamailio:freeswitch:port_2', '5071') }}
+#2 sip:{{ salt['pillar.get']('kamailio:freeswitch:address_3', '127.0.0.1') }}:{{ salt['pillar.get']('kamailio:freeswitch:port_3', '5072') }}

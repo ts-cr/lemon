@@ -1,0 +1,7 @@
+<include>
+  <extension name="rate_ivr">
+    <condition field="destination_number" expression="^5011$">
+      <action application="lua" data="rate_avmd.lua"/> 
+    </condition>
+  </extension>
+</include>

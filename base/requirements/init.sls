@@ -1,0 +1,58 @@
+{% set kernel_release = salt['grains.get']('kernelrelease', '') %}
+
+packages:
+    pkg.installed:
+        - names:
+            - linux-headers-{{ kernel_release }}
+            - linux-image-{{ kernel_release }}
+            - linux-image-extra-{{ kernel_release }}
+            - opencl-headers
+            - protobuf-compiler
+            - libprotoc-dev
+            - libboost-all-dev
+            - libleveldb-dev
+            - hdf5-tools
+            - libhdf5-serial-dev
+            - libopencv-core-dev
+            - libopencv-highgui-dev
+            - libsnappy-dev
+            - libsnappy1
+            - libatlas-base-dev
+            - libstdc++6-4.8-dbg
+            - libgoogle-glog0
+            - libgoogle-glog-dev
+            - libgflags-dev
+            - liblmdb-dev
+            - python-pip
+            - gfortran
+            - python-software-properties
+            - software-properties-common
+            - build-essential
+            - git
+            - gcc
+            - g++
+            - cmake
+            - git-core
+            - libcurl4-openssl-dev
+            - libmemcached-dev
+            - libmemcached-tools
+            - libcurl4-openssl-dev
+            - libffi-dev
+            - libyaml-dev
+            - libssl-dev
+            - htop
+            - less
+            - screen
+            - tmux
+            - wget
+            - curl
+            - sed
+            - exim4
+            - exim4-config
+            - bzip2
+            - m4
+            - make
+            - libncurses5-dev
+            - monit
+            - vim
+            - jq
