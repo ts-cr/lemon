@@ -64,35 +64,45 @@ asterisk:
 asterisk source:
   file:
     - managed
-    - name: /usr/src/asterisk-11.11.0.tar.gz 
-    - source: salt://source/asterisk-11.11.0.tar.gz
+    - name: /usr/src/asterisk-11.23.1.tar.gz 
+    - source: salt://source/asterisk-11.23.1.tar.gz
 
 untar asterisk:
     cmd.run:
-        - name: "tar -zxf asterisk-11.11.0.tar.gz"
+        - name: "tar -zxf asterisk-11.23.1.tar.gz"
         - unless: which asterisk
         - cwd: /usr/src/
         - require:
             - file: asterisk source
 
-
-asterisk diff:
+opus source:
     file:
         - managed
-        - name: /usr/src/asterisk-11.11.0/asterisk_opus+vp8.diff
-        - source: salt://source/asterisk_opus+vp8.diff
+        - name: /usr/src/opus-1.1.3.tar.gz
+        - source: salt://source/opus-1.1.3.tar.gz
 
-opus codec:
-    file:
-        - managed
-        - name: /usr/src/opus-1.1.tar.gz
-        - source: salt://source/opus-1.1.tar.gz
+untar opus:
+    cmd.run:
+        - name: "tar -zxf opus-1.1.3.tar.gz"
+        - unless: which opus
+        - cwd: /usr/src/asterisk-11.23.1
+        - require:
+            - file: opus source
+
+compile opus:
+    cmd.run: 
+        - name: "./configure && make && make install "
+        - unless: which opus
+        - cwd: /usr/src/asterisk-11.23.1/opus-1.1.3
+        - require:
+            - cmd: untar opus
+
 
 compile asterisk:
     cmd.run: 
         - name: "./configure && make && make install && make config"
         - unless: which asterisk
-        - cwd: /usr/src/asterisk-11.11.0/
+        - cwd: /usr/src/asterisk-11.23.1/
         - require:
             - cmd: untar asterisk
 
