@@ -1,7 +1,6 @@
 include:
     - requirements
 
-
 Lua 5.1 packages:
     pkg.installed:
         - names:
@@ -9,9 +8,6 @@ Lua 5.1 packages:
 
 asterisk:
     user.present
-
-
-
 
 /var/lib/asterisk:
     file.directory:
@@ -75,28 +71,17 @@ untar asterisk:
         - require:
             - file: asterisk source
 
-opus source:
-    file:
-        - managed
-        - name: /usr/src/opus-1.1.3.tar.gz
-        - source: salt://source/opus-1.1.3.tar.gz
+#asterisk diff:
+#    file:
+#        - managed
+#        - name: /usr/src/asterisk-11.11.0/asterisk_opus+vp8.diff
+#        - source: salt://source/asterisk_opus+vp8.diff
 
-untar opus:
-    cmd.run:
-        - name: "tar -zxf opus-1.1.3.tar.gz"
-        - unless: which opus
-        - cwd: /usr/src/asterisk-11.23.1
-        - require:
-            - file: opus source
-
-compile opus:
-    cmd.run: 
-        - name: "./configure && make && make install "
-        - unless: which opus
-        - cwd: /usr/src/asterisk-11.23.1/opus-1.1.3
-        - require:
-            - cmd: untar opus
-
+#opus codec:
+#    file:
+#        - managed
+#        - name: /usr/src/opus-1.1.tar.gz
+#        - source: salt://source/opus-1.1.tar.gz
 
 compile asterisk:
     cmd.run: 
@@ -109,7 +94,7 @@ compile asterisk:
 
 Run only if dialplan changed:
   cmd.wait:
-    - name: asterisk -rx 'dialplan reload'
+    - name: asterisk -rx 'core reload'
     - watch:
         - file: extensions.conf
 

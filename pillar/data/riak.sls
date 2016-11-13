@@ -1,5 +1,5 @@
 riak:
     network:
-        host: 172.31.47.69
+        host: 172.31.23.26
 
 #data_overlord

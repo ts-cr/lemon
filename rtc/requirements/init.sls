@@ -98,7 +98,7 @@ starfruit required packages:
             - python-dev
             - python-pip
             - libatlas-dev
-            - libatlas3gf-base
+            - libatlas3-base
             - libpng12-dev
             - libfreetype6
             - libfreetype6-dev

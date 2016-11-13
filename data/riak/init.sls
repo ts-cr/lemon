@@ -1,8 +1,6 @@
-pip riak:
-  pip.installed:
-    - name: riak
-    - require:
-      - pkg: python-pip
+run pip riak:
+    cmd.run:
+        - name: "pip install riak"
 
 java packages:
     pkg.installed:
@@ -37,3 +35,8 @@ riakkv:
         - source: salt://riak/conf/riak
         - require:
             - pkg: riak
+
+/usr/src/riak_explorer-1.2.3-debian-8.tar.gz:
+  file:
+    - managed
+    - source: salt://source/riak_explorer-1.2.3-debian-8.tar.gz

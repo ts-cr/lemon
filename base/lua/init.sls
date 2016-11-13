@@ -1,7 +1,6 @@
 lua packages:
     pkg.installed:
         - names:
-            - libzmq3
             - libzmq3-dev
             - libgraphicsmagick1-dev
             - libfftw3-dev
@@ -21,10 +20,18 @@ lua packages:
             - libopenblas-dev
             - liblapack-dev
             - libhdf5-dev
+            - lua5.1
+            - liblua5.1-0
+            - liblua5.1-0-dev
 
 
 # The follow copy is hardwire with lua 5.1 and is considered a hack, for JIT magic we need to fix it.
 # We need to test the previous message from the past, we're on JIT now and everything appears to be fine.
+
+# lol... so now were jit ready and everytime it's ok?... right?.. hmm!
+lualib link:
+    cmd.run: 
+        - name: "ln -sf /usr/lib/x86_64-linux-gnu/liblua5.1.so /usr/lib/liblua.so"
 
 move resty-upload:
     cmd.run:
@@ -41,7 +48,7 @@ lua-resty-upload:
 
 luajit source:
     git.latest:
-        - name: http://luajit.org/git/luajit-2.0.git
+        - name: https://github.com/LuaJIT/LuaJIT.git
         - target: /usr/src/luajit
         - rev: v2.1
 
@@ -65,6 +72,7 @@ luajit rocks:
     git.latest:
         - name: https://github.com/keplerproject/luarocks.git
         - target: /usr/src/jitrocks
+        - unless: cat /srv/jitrocks
         - rev: master
 
 configure jitrocks:

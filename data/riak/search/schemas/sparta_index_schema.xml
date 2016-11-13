@@ -18,8 +18,7 @@
 
 <schema name="sparta_index_schema" version="1.5">
  <fields>
-   <!-- The named fields in each currency map -->
-   <field name="payment_binder_payment_option_register"   type="string"   indexed="true" stored="true" />
+    <field name="payment_binder_payment_option_register"   type="string"   indexed="true" stored="true" />
 	<field name="boat_effective_date_register"   type="string"   indexed="true" stored="true" />
 	<field name="modifier_user_id_register"   type="string"   indexed="true" stored="true" />
 	<field name="dental_premium_register"   type="string"   indexed="true" stored="true" />
@@ -28,16 +27,18 @@
 	<field name="ancilliary_dental_care_register"   type="string"   indexed="true" stored="true" />
 	<field name="proposed_effective_date_register"   type="string"   indexed="true" stored="true" />
 	<field name="life_notes_register"   type="string"   indexed="true" stored="true" />
+	<field name="priority_code_register"   type="string"   indexed="true" stored="true" />
+	<field name="spouse_1_gender_register"   type="string"   indexed="true" stored="true" />
+	<field name="street_address_register"   type="string"   indexed="true" stored="true" />
+	<field name="mobile_number_register"   type="string"   indexed="true" stored="true" />
 	<field name="ip_address_register"   type="string"   indexed="true" stored="true" />
 	<field name="auto_vehicle_two_vin_register"   type="string"   indexed="true" stored="true" />
 	<field name="currently_on_medicaid_or_medicare_register"   type="string"   indexed="true" stored="true" />
 	<field name="auto_vehicle_one_model_register"   type="string"   indexed="true" stored="true" />
 	<field name="home_update_comp_timestamp_register"   type="string"   indexed="true" stored="true" />
-	<field name="contact_info_do_you_own_your_home_register"   type="string"   indexed="true" stored="true" />
 	<field name="commercial_documents_needed_register"   type="string"   indexed="true" stored="true" />
 	<field name="quoted_home_premium_register"   type="string"   indexed="true" stored="true" />
-	<field name="contact_info_marketplace_email_register"   type="string"   indexed="true" stored="true" />
-	<field name="employment_status_register"   type="string"   indexed="true" stored="true" />
+	<field name="marketplace_email_register"   type="string"   indexed="true" stored="true" />
 	<field name="health_partner_register"   type="string"   indexed="true" stored="true" />
 	<field name="auto_scrubber_register"   type="string"   indexed="true" stored="true" />
 	<field name="citizenship_documents_needed_register"   type="string"   indexed="true" stored="true" />
@@ -57,28 +58,27 @@
 	<field name="do_not_crosssell_register"   type="string"   indexed="true" stored="true" />
 	<field name="home_amount_of_personal_property_register"   type="string"   indexed="true" stored="true" />
 	<field name="cc_presold_timestamp_register"   type="string"   indexed="true" stored="true" />
-	<field name="contact_info_child_3_dob_register"   type="string"   indexed="true" stored="true" />
-	<field name="contact_info_child_2_first_name_register"   type="string"   indexed="true" stored="true" />
+	<field name="child_3_dob_register"   type="string"   indexed="true" stored="true" />
+	<field name="child_2_first_name_register"   type="string"   indexed="true" stored="true" />
 	<field name="home_quoted_home_company_register"   type="string"   indexed="true" stored="true" />
-	<field name="contact_info_state_register"   type="string"   indexed="true" stored="true" />
+	<field name="state_register"   type="string"   indexed="true" stored="true" />
 	<field name="current_coverage_register"   type="string"   indexed="true" stored="true" />
-	<field name="contact_info_lead_source_register"   type="string"   indexed="true" stored="true" />
+	<field name="lead_source_register"   type="string"   indexed="true" stored="true" />
 	<field name="health_verification_documents_needed_2016_register"   type="string"   indexed="true" stored="true" />
 	<field name="auto_driver_two_license_number_register"   type="string"   indexed="true" stored="true" />
 	<field name="home_ownership_register"   type="string"   indexed="true" stored="true" />
 	<field name="payment_credit_card_number_register"   type="string"   indexed="true" stored="true" />
 	<field name="ancilliary_diabetes_type_one_or_two_blood_press_am_register"   type="string"   indexed="true" stored="true" />
-	<field name="contact_info_agent_code_register"   type="string"   indexed="true" stored="true" />
+	<field name="agent_code_register"   type="string"   indexed="true" stored="true" />
 	<field name="ancillary_bank_routing_number_text_register"   type="string"   indexed="true" stored="true" />
 	<field name="auto_lead_source_register"   type="string"   indexed="true" stored="true" />
-	<field name="contact_info_child_4_first_name_register"   type="string"   indexed="true" stored="true" />
+	<field name="child_4_first_name_register"   type="string"   indexed="true" stored="true" />
 	<field name="carotid_artery_stenosis_etc_register"   type="string"   indexed="true" stored="true" />
 	<field name="current_fiorella_health_client_register"   type="string"   indexed="true" stored="true" />
 	<field name="heatlh_plan_2016_register"   type="string"   indexed="true" stored="true" />
-	<field name="contact_info_date_modified_register"   type="string"   indexed="true" stored="true" />
+	<field name="date_modified_register"   type="string"   indexed="true" stored="true" />
 	<field name="campaignname_register"   type="string"   indexed="true" stored="true" />
 	<field name="home_insurance_policy_register"   type="string"   indexed="true" stored="true" />
-	<field name="contact_info_child_4_name_register"   type="string"   indexed="true" stored="true" />
 	<field name="home_new_purchase_register"   type="string"   indexed="true" stored="true" />
 	<field name="p_and_c_writing_agent_register"   type="string"   indexed="true" stored="true" />
 	<field name="ancilliary_any_non_routine_consultation_scheduled_register"   type="string"   indexed="true" stored="true" />
@@ -91,14 +91,14 @@
 	<field name="commercial_writing_agent_register"   type="string"   indexed="true" stored="true" />
 	<field name="retention_status_register"   type="string"   indexed="true" stored="true" />
 	<field name="health_adults_applying_for_coverage_2016_register"   type="string"   indexed="true" stored="true" />
-	<field name="contact_info_updated_premium_2016_register"   type="string"   indexed="true" stored="true" />
+	<field name="updated_premium_2016_register"   type="string"   indexed="true" stored="true" />
 	<field name="auto_2_rental_car_register"   type="string"   indexed="true" stored="true" />
-	<field name="contact_info_mailing_address_different_register"   type="string"   indexed="true" stored="true" />
+	<field name="mailing_address_different_register"   type="string"   indexed="true" stored="true" />
 	<field name="us_citizenship_register"   type="string"   indexed="true" stored="true" />
 	<field name="ancilliary_dental_lead_status_register"   type="string"   indexed="true" stored="true" />
 	<field name="ancilliary_auto_priority_code_register"   type="string"   indexed="true" stored="true" />
 	<field name="tags_register"   type="string"   indexed="true" stored="true" />
-	<field name="contact_info_marketplace_changed_premium_register"   type="string"   indexed="true" stored="true" />
+	<field name="marketplace_changed_premium_register"   type="string"   indexed="true" stored="true" />
 	<field name="height_inches_register"   type="string"   indexed="true" stored="true" />
 	<field name="current_premium_2_register"   type="string"   indexed="true" stored="true" />
 	<field name="home_exp_dateclosing_date_register"   type="string"   indexed="true" stored="true" />
@@ -106,19 +106,19 @@
 	<field name="has_directory_register"   type="string"   indexed="true" stored="true" />
 	<field name="number_of_boats_register"   type="string"   indexed="true" stored="true" />
 	<field name="address_register"   type="string"   indexed="true" stored="true" />
-	<field name="contact_info_transfer_timestamp_register"   type="string"   indexed="true" stored="true" />
+	<field name="transfer_timestamp_register"   type="string"   indexed="true" stored="true" />
 	<field name="health_marketplace_app_id_2015_register"   type="string"   indexed="true" stored="true" />
 	<field name="vehicle_1_model_register"   type="string"   indexed="true" stored="true" />
 	<field name="health_dropped_transfer_timestamp_register"   type="string"   indexed="true" stored="true" />
 	<field name="ancilliary_lead_source_register"   type="string"   indexed="true" stored="true" />
-	<field name="contact_info_gender_register"   type="string"   indexed="true" stored="true" />
+	<field name="gender_register"   type="string"   indexed="true" stored="true" />
 	<field name="second_password_register"   type="string"   indexed="true" stored="true" />
 	<field name="ancilliary_nursing_home_hospitalized_etc_register"   type="string"   indexed="true" stored="true" />
 	<field name="vehicle_3_make_register"   type="string"   indexed="true" stored="true" />
 	<field name="health_us_citizen_or_legal_permanent_resident_register"   type="string"   indexed="true" stored="true" />
 	<field name="health_renewal_agent_2016_register"   type="string"   indexed="true" stored="true" />
 	<field name="major_driving_offense_register"   type="string"   indexed="true" stored="true" />
-	<field name="contact_info_red_box_error_register"   type="string"   indexed="true" stored="true" />
+	<field name="red_box_error_register"   type="string"   indexed="true" stored="true" />
 	<field name="health_quoted_renewal_gross_premium_2016_register"   type="string"   indexed="true" stored="true" />
 	<field name="current_auto_carrier_register"   type="string"   indexed="true" stored="true" />
 	<field name="did_you_recently_get_divorced_2_register"   type="string"   indexed="true" stored="true" />
@@ -129,11 +129,9 @@
 	<field name="what_floor_is_condo_on_register"   type="string"   indexed="true" stored="true" />
 	<field name="updated_income_register"   type="string"   indexed="true" stored="true" />
 	<field name="auto_insurance_premium_register"   type="string"   indexed="true" stored="true" />
-	<field name="contact_info_child_2_dob_register"   type="string"   indexed="true" stored="true" />
 	<field name="home_lead_source_register"   type="string"   indexed="true" stored="true" />
 	<field name="home_fence_or_screen_enclosure_register"   type="string"   indexed="true" stored="true" />
 	<field name="health_tentative_timestamp_register"   type="string"   indexed="true" stored="true" />
-	<field name="child_3_social_register"   type="string"   indexed="true" stored="true" />
 	<field name="bathrooms_register"   type="string"   indexed="true" stored="true" />
 	<field name="vehicle_3_year_register"   type="string"   indexed="true" stored="true" />
 	<field name="life_writing_agent_register"   type="string"   indexed="true" stored="true" />
@@ -150,7 +148,7 @@
 	<field name="ancilliary_two_or_more_imm_relatives_with_issues_register"   type="string"   indexed="true" stored="true" />
 	<field name="home_gated_community_register"   type="string"   indexed="true" stored="true" />
 	<field name="payment_paid_confirmation_number_register"   type="string"   indexed="true" stored="true" />
-	<field name="contact_info_created_date_register"   type="string"   indexed="true" stored="true" />
+	<field name="created_date_register"   type="string"   indexed="true" stored="true" />
 	<field name="health_cloud_premium_after_subsidy_2016_register"   type="string"   indexed="true" stored="true" />
 	<field name="ancilliary_priority_code_register"   type="string"   indexed="true" stored="true" />
 	<field name="phone_register"   type="string"   indexed="true" stored="true" />
@@ -159,7 +157,7 @@
 	<field name="purchase_timeframe_register"   type="string"   indexed="true" stored="true" />
 	<field name="ancilliary_prescription_medication_in_last_three_years_register"   type="string"   indexed="true" stored="true" />
 	<field name="directory_uuid_register"   type="string"   indexed="true" stored="true" />
-	<field name="contact_info_child_2_name_register"   type="string"   indexed="true" stored="true" />
+	<field name="child_2_name_register"   type="string"   indexed="true" stored="true" />
 	<field name="auto_vehicle_two_year_register"   type="string"   indexed="true" stored="true" />
 	<field name="accident_elite_notes_register"   type="string"   indexed="true" stored="true" />
 	<field name="account_register"   type="string"   indexed="true" stored="true" />
@@ -179,21 +177,19 @@
 	<field name="effective_date_2014_register"   type="string"   indexed="true" stored="true" />
 	<field name="vehicle_2_make_register"   type="string"   indexed="true" stored="true" />
 	<field name="alternate_phone_register"   type="string"   indexed="true" stored="true" />
-	<field name="contact_info_child_3_name_register"   type="string"   indexed="true" stored="true" />
 	<field name="ancillary_bank_account_number_text_register"   type="string"   indexed="true" stored="true" />
 	<field name="leadid_register"   type="string"   indexed="true" stored="true" />
 	<field name="health_deadni_timestamp_register"   type="string"   indexed="true" stored="true" />
 	<field name="flood_documents_needed_register"   type="string"   indexed="true" stored="true" />
 	<field name="quoted_auto_company_register"   type="string"   indexed="true" stored="true" />
-	<field name="contact_info_mailing_address_register"   type="string"   indexed="true" stored="true" />
+	<field name="mailing_address_register"   type="string"   indexed="true" stored="true" />
 	<field name="health_carrier_2014_register"   type="string"   indexed="true" stored="true" />
 	<field name="health_carrier_2015_register"   type="string"   indexed="true" stored="true" />
-	<field name="contact_info_subsidy_drop_date_register"   type="string"   indexed="true" stored="true" />
+	<field name="subsidy_drop_date_register"   type="string"   indexed="true" stored="true" />
 	<field name="new_application_id_register"   type="string"   indexed="true" stored="true" />
-	<field name="contact_info_child_3_first_name_register"   type="string"   indexed="true" stored="true" />
+	<field name="child_3_first_name_register"   type="string"   indexed="true" stored="true" />
 	<field name="did_the_lead_answer_the_phone_register"   type="string"   indexed="true" stored="true" />
 	<field name="do_you_have_a_social_security_number_register"   type="string"   indexed="true" stored="true" />
-	<field name="child_1_name_register"   type="string"   indexed="true" stored="true" />
 	<field name="child_2_gender_register"   type="string"   indexed="true" stored="true" />
 	<field name="life_desired_amount_of_coverage_register"   type="string"   indexed="true" stored="true" />
 	<field name="payment_cc_cvv_register"   type="string"   indexed="true" stored="true" />
@@ -210,17 +206,15 @@
 	<field name="health_verification_documents_due_date_2016_register"   type="string"   indexed="true" stored="true" />
 	<field name="beneficiary_relationship_register"   type="string"   indexed="true" stored="true" />
 	<field name="health_presold_processor_2016_register"   type="string"   indexed="true" stored="true" />
-	<field name="contact_info_spouse_register"   type="string"   indexed="true" stored="true" />
+	<field name="spouse_register"   type="string"   indexed="true" stored="true" />
 	<field name="health_final_subsidy_2016_register"   type="string"   indexed="true" stored="true" />
 	<field name="dental_plan_register"   type="string"   indexed="true" stored="true" />
-	<field name="contact_info_language_preference_register"   type="string"   indexed="true" stored="true" />
 	<field name="health_wants_to_renew_same_plan_for_2016_register"   type="string"   indexed="true" stored="true" />
-	<field name="contact_info_child_2_last_name_register"   type="string"   indexed="true" stored="true" />
+	<field name="child_2_last_name_register"   type="string"   indexed="true" stored="true" />
 	<field name="auto_vehicle_one_vin_register"   type="string"   indexed="true" stored="true" />
 	<field name="auto_bound_timestamp_register"   type="string"   indexed="true" stored="true" />
 	<field name="date_paramed_exam_ordered_register"   type="string"   indexed="true" stored="true" />
 	<field name="last_call_disposition_8_register"   type="string"   indexed="true" stored="true" />
-	<field name="child_1_gender_register"   type="string"   indexed="true" stored="true" />
 	<field name="construction_type_register"   type="string"   indexed="true" stored="true" />
 	<field name="liability_lead_status_register"   type="string"   indexed="true" stored="true" />
 	<field name="hospital_confinement_register"   type="string"   indexed="true" stored="true" />
@@ -238,7 +232,7 @@
 	<field name="uuid_register"   type="string"   indexed="true" stored="true" />
 	<field name="health_client_register"   type="string"   indexed="true" stored="true" />
 	<field name="current_home_carrier_register"   type="string"   indexed="true" stored="true" />
-	<field name="contact_info_health_insurance_checkbox_register"   type="string"   indexed="true" stored="true" />
+	<field name="health_insurance_checkbox_register"   type="string"   indexed="true" stored="true" />
 	<field name="adults_on_plan_2014_register"   type="string"   indexed="true" stored="true" />
 	<field name="adults_on_plan_2015_register"   type="string"   indexed="true" stored="true" />
 	<field name="home_type_of_dwelling_register"   type="string"   indexed="true" stored="true" />
@@ -246,12 +240,12 @@
 	<field name="ancilliary_dental_care_premium_register"   type="string"   indexed="true" stored="true" />
 	<field name="alcohol_or_substance_abuse_5_years_register"   type="string"   indexed="true" stored="true" />
 	<field name="paramed_company_register"   type="string"   indexed="true" stored="true" />
-	<field name="contact_info_other_phone_register"   type="string"   indexed="true" stored="true" />
+	<field name="other_phone_register"   type="string"   indexed="true" stored="true" />
 	<field name="subsidy_drop_off_date_new_2016_register"   type="string"   indexed="true" stored="true" />
 	<field name="new_purchase_register"   type="string"   indexed="true" stored="true" />
 	<field name="quoted_renewal_plan_if_different_2016_register"   type="string"   indexed="true" stored="true" />
 	<field name="health_effective_date_2016_register"   type="string"   indexed="true" stored="true" />
-	<field name="contact_info_federal_do_not_call_register"   type="string"   indexed="true" stored="true" />
+	<field name="federal_do_not_call_register"   type="string"   indexed="true" stored="true" />
 	<field name="other_policy_sold_information_register"   type="string"   indexed="true" stored="true" />
 	<field name="life_bank_account_routing_number_register"   type="string"   indexed="true" stored="true" />
 	<field name="ancilliary_accident_elite_premium_register"   type="string"   indexed="true" stored="true" />
@@ -270,12 +264,11 @@
 	<field name="who_medicaid_2_register"   type="string"   indexed="true" stored="true" />
 	<field name="home_dog_register"   type="string"   indexed="true" stored="true" />
 	<field name="additional_info_required_register"   type="string"   indexed="true" stored="true" />
-	<field name="contact_info_first_name_register"   type="string"   indexed="true" stored="true" />
 	<field name="child_3_name_register"   type="string"   indexed="true" stored="true" />
 	<field name="health_current_premium_register"   type="string"   indexed="true" stored="true" />
 	<field name="home_loan_number_register"   type="string"   indexed="true" stored="true" />
 	<field name="do_you_own_your_home_register"   type="string"   indexed="true" stored="true" />
-	<field name="contact_info_child_1_gender_register"   type="string"   indexed="true" stored="true" />
+	<field name="child_1_gender_register"   type="string"   indexed="true" stored="true" />
 	<field name="payment_payment_charge_request_register"   type="string"   indexed="true" stored="true" />
 	<field name="ancilliary_hospital_confinement_notes_register"   type="string"   indexed="true" stored="true" />
 	<field name="ancilliary_cysts_growths_etc_not_seen_for_register"   type="string"   indexed="true" stored="true" />
@@ -286,7 +279,7 @@
 	<field name="spouse_income_source_register"   type="string"   indexed="true" stored="true" />
 	<field name="home_quote_number_register"   type="string"   indexed="true" stored="true" />
 	<field name="how_many_claims_in_the_last_5_years_register"   type="string"   indexed="true" stored="true" />
-	<field name="contact_info_child_3_gender_register"   type="string"   indexed="true" stored="true" />
+	<field name="child_3_gender_register"   type="string"   indexed="true" stored="true" />
 	<field name="ancilliary_dental_request_eff_date_register"   type="string"   indexed="true" stored="true" />
 	<field name="auto_lead_status_register"   type="string"   indexed="true" stored="true" />
 	<field name="electrical_system_register"   type="string"   indexed="true" stored="true" />
@@ -310,25 +303,23 @@
 	<field name="realtormortgage_broker_register"   type="string"   indexed="true" stored="true" />
 	<field name="umbrella_company_register"   type="string"   indexed="true" stored="true" />
 	<field name="major_illness_in_the_last_10_years_register"   type="string"   indexed="true" stored="true" />
-	<field name="contact_info_lead_type_register"   type="string"   indexed="true" stored="true" />
-	<field name="contact_info_date_of_birth_register"   type="string"   indexed="true" stored="true" />
+	<field name="lead_type_register"   type="string"   indexed="true" stored="true" />
 	<field name="vehicle_3_towing_register"   type="string"   indexed="true" stored="true" />
 	<field name="ancilliary_accident_register"   type="string"   indexed="true" stored="true" />
 	<field name="or_more_imm_relative_with_issues_amp_1_register"   type="string"   indexed="true" stored="true" />
 	<field name="spouse_social_2_register"   type="string"   indexed="true" stored="true" />
 	<field name="dp1_dob_register"   type="string"   indexed="true" stored="true" />
 	<field name="alarm_certificate_register"   type="string"   indexed="true" stored="true" />
-	<field name="child_1_dob_register"   type="string"   indexed="true" stored="true" />
 	<field name="campaignsubsource_register"   type="string"   indexed="true" stored="true" />
-	<field name="contact_info_number_of_children_register"   type="string"   indexed="true" stored="true" />
 	<field name="nursing_home_hospitalized_etc_register"   type="string"   indexed="true" stored="true" />
 	<field name="home_year_built_register"   type="string"   indexed="true" stored="true" />
 	<field name="interested_in_life_insurance_register"   type="string"   indexed="true" stored="true" />
 	<field name="auto_1_rental_car_register"   type="string"   indexed="true" stored="true" />
-	<field name="contact_info_last_name_register"   type="string"   indexed="true" stored="true" />
+	 <!-- duplicate
+	<field name="last_name_register"   type="string"   indexed="true" stored="true" />
+	-->
 	<field name="do_you_have_health_insurance_register"   type="string"   indexed="true" stored="true" />
 	<field name="life_insurance_policy_number_register"   type="string"   indexed="true" stored="true" />
-	<field name="child_4_dob_register"   type="string"   indexed="true" stored="true" />
 	<field name="employment_status_2_register"   type="string"   indexed="true" stored="true" />
 	<field name="renewal_2015_app_register"   type="string"   indexed="true" stored="true" />
 	<field name="home_wind_mit_register"   type="string"   indexed="true" stored="true" />
@@ -341,14 +332,13 @@
 	<field name="life_bank_account_number_register"   type="string"   indexed="true" stored="true" />
 	<field name="blank_register"   type="string"   indexed="true" stored="true" />
 	<field name="auto_expiration_date_register"   type="string"   indexed="true" stored="true" />
-	<field name="city_register"   type="string"   indexed="true" stored="true" />
 	<field name="checked_register"   type="string"   indexed="true" stored="true" />
 	<field name="language_preference_register"   type="string"   indexed="true" stored="true" />
 	<field name="child_1_income_register"   type="string"   indexed="true" stored="true" />
 	<field name="ancillary_bank_account_number_register"   type="string"   indexed="true" stored="true" />
 	<field name="updated_premium_register"   type="string"   indexed="true" stored="true" />
 	<field name="ancilliary_hypertension_register"   type="string"   indexed="true" stored="true" />
-	<field name="contact_info_corrected_discrepancy_completed_date_register"   type="string"   indexed="true" stored="true" />
+	<field name="corrected_discrepancy_completed_date_register"   type="string"   indexed="true" stored="true" />
 	<field name="umbrella_lead_status_register"   type="string"   indexed="true" stored="true" />
 	<field name="other_policy_sold_premium_register"   type="string"   indexed="true" stored="true" />
 	<field name="marketplace_policy_2016_register"   type="string"   indexed="true" stored="true" />
@@ -356,12 +346,11 @@
 	<field name="has_subsidy_dropped_off_register"   type="string"   indexed="true" stored="true" />
 	<field name="age_of_roof_register"   type="string"   indexed="true" stored="true" />
 	<field name="customer_service_associate_register"   type="string"   indexed="true" stored="true" />
-	<field name="contact_info_ancilliary_insurance_checkbox_register"   type="string"   indexed="true" stored="true" />
+	<field name="ancilliary_insurance_checkbox_register"   type="string"   indexed="true" stored="true" />
 	<field name="spouse_weight_register"   type="string"   indexed="true" stored="true" />
 	<field name="home_priority_code_register"   type="string"   indexed="true" stored="true" />
 	<field name="health_agent_notes_register"   type="string"   indexed="true" stored="true" />
 	<field name="spouse_height_register"   type="string"   indexed="true" stored="true" />
-	<field name="child_1_social_register"   type="string"   indexed="true" stored="true" />
 	<field name="ancilliary_hiv_positive_aids_related_complex_aids_register"   type="string"   indexed="true" stored="true" />
 	<field name="home_current_home_carrier_register"   type="string"   indexed="true" stored="true" />
 	<field name="flood_quote_offered_register"   type="string"   indexed="true" stored="true" />
@@ -369,7 +358,7 @@
 	<field name="motorcycle_policy_number_register"   type="string"   indexed="true" stored="true" />
 	<field name="life_presold_timestamp_register"   type="string"   indexed="true" stored="true" />
 	<field name="liability_effective_date_register"   type="string"   indexed="true" stored="true" />
-	<field name="contact_info_child_3_last_name_register"   type="string"   indexed="true" stored="true" />
+	<field name="child_3_last_name_register"   type="string"   indexed="true" stored="true" />
 	<field name="date_renewal_email_sent_out_register"   type="string"   indexed="true" stored="true" />
 	<field name="wind_mit_register"   type="string"   indexed="true" stored="true" />
 	<field name="boat_company_register"   type="string"   indexed="true" stored="true" />
@@ -377,7 +366,7 @@
 	<field name="life_monthly_premium_register"   type="string"   indexed="true" stored="true" />
 	<field name="driver_3_license_number_register"   type="string"   indexed="true" stored="true" />
 	<field name="amount_of_personal_property_register"   type="string"   indexed="true" stored="true" />
-	<field name="contact_info_child_1_last_name_register"   type="string"   indexed="true" stored="true" />
+	<field name="child_1_last_name_register"   type="string"   indexed="true" stored="true" />
 	<field name="rc_quote_premium_register"   type="string"   indexed="true" stored="true" />
 	<field name="home_insurance_carrier_register"   type="string"   indexed="true" stored="true" />
 	<field name="hospital_confinement_notes_register"   type="string"   indexed="true" stored="true" />
@@ -387,10 +376,10 @@
 	<field name="liability_coverage_register"   type="string"   indexed="true" stored="true" />
 	<field name="commercial_effective_date_register"   type="string"   indexed="true" stored="true" />
 	<field name="life_paramed_company_register"   type="string"   indexed="true" stored="true" />
-	<field name="contact_info_can_find_a_temp_id_card_register"   type="string"   indexed="true" stored="true" />
-	<field name="contact_info_social_security_number_register"   type="string"   indexed="true" stored="true" />
+	<field name="can_find_a_temp_id_card_register"   type="string"   indexed="true" stored="true" />
+	<field name="social_security_number_register"   type="string"   indexed="true" stored="true" />
 	<field name="auto_quoted_auto_premium_register"   type="string"   indexed="true" stored="true" />
-	<field name="contact_info_child_4_gender_register"   type="string"   indexed="true" stored="true" />
+	<field name="child_4_gender_register"   type="string"   indexed="true" stored="true" />
 	<field name="home_quoted_home_number_register"   type="string"   indexed="true" stored="true" />
 	<field name="health_lead_source_register"   type="string"   indexed="true" stored="true" />
 	<field name="point_if_applicable_4_register"   type="string"   indexed="true" stored="true" />
@@ -407,16 +396,15 @@
 	<field name="spouse_state_of_birth_register"   type="string"   indexed="true" stored="true" />
 	<field name="current_premium_register"   type="string"   indexed="true" stored="true" />
 	<field name="exterior_wall_register"   type="string"   indexed="true" stored="true" />
-	<field name="contact_info_mailing_state_register"   type="string"   indexed="true" stored="true" />
+	<field name="mailing_state_register"   type="string"   indexed="true" stored="true" />
 	<field name="abnormal_tests_requiring_followup_register"   type="string"   indexed="true" stored="true" />
-	<field name="contact_info_home_insurance_checkbox_register"   type="string"   indexed="true" stored="true" />
+	<field name="home_insurance_checkbox_register"   type="string"   indexed="true" stored="true" />
 	<field name="centrally_monitored_alarm_register"   type="string"   indexed="true" stored="true" />
-	<field name="contact_info_corrected_discrepancy_register"   type="string"   indexed="true" stored="true" />
+	<field name="corrected_discrepancy_register"   type="string"   indexed="true" stored="true" />
 	<field name="payment_bank_account_number_register"   type="string"   indexed="true" stored="true" />
 	<field name="age_2_register"   type="string"   indexed="true" stored="true" />
-	<field name="other_phone_register"   type="string"   indexed="true" stored="true" />
-	<field name="contact_info_city_register"   type="string"   indexed="true" stored="true" />
-	<field name="contact_info_property_address_2_register"   type="string"   indexed="true" stored="true" />
+	<field name="city_register"   type="string"   indexed="true" stored="true" />
+	<field name="property_address_2_register"   type="string"   indexed="true" stored="true" />
 	<field name="home_payment_option_register"   type="string"   indexed="true" stored="true" />
 	<field name="health_enrolled_timestamp_register"   type="string"   indexed="true" stored="true" />
 	<field name="individual_income_register"   type="string"   indexed="true" stored="true" />
@@ -424,7 +412,7 @@
 	<field name="dob_register"   type="string"   indexed="true" stored="true" />
 	<field name="please_list_surgerys_here_register"   type="string"   indexed="true" stored="true" />
 	<field name="dog_register"   type="string"   indexed="true" stored="true" />
-	<field name="contact_info_child_1_social_register"   type="string"   indexed="true" stored="true" />
+	<field name="child_1_social_register"   type="string"   indexed="true" stored="true" />
 	<field name="where_were_they_born_2_register"   type="string"   indexed="true" stored="true" />
 	<field name="home_mortgage_clause_new_register"   type="string"   indexed="true" stored="true" />
 	<field name="current_coverage_type_register"   type="string"   indexed="true" stored="true" />
@@ -447,8 +435,8 @@
 	<field name="date_mailer_sent_out_register"   type="string"   indexed="true" stored="true" />
 	<field name="if_new_purchase_is_it_a_foreclosure_register"   type="string"   indexed="true" stored="true" />
 	<field name="vehicle_3_model_register"   type="string"   indexed="true" stored="true" />
-	<field name="contact_info_created_by_register"   type="string"   indexed="true" stored="true" />
-	<field name="contact_info_cellphone_register"   type="string"   indexed="true" stored="true" />
+	<field name="created_by_register"   type="string"   indexed="true" stored="true" />
+	<field name="cellphone_register"   type="string"   indexed="true" stored="true" />
 	<field name="auto_2_towing_register"   type="string"   indexed="true" stored="true" />
 	<field name="health_cloud_subsidy_2016_register"   type="string"   indexed="true" stored="true" />
 	<field name="home_garage_register"   type="string"   indexed="true" stored="true" />
@@ -461,7 +449,7 @@
 	<field name="payment_option_register"   type="string"   indexed="true" stored="true" />
 	<field name="cc_enrolled_timestamp_register"   type="string"   indexed="true" stored="true" />
 	<field name="retention_agent_register"   type="string"   indexed="true" stored="true" />
-	<field name="contact_info_property_address_register"   type="string"   indexed="true" stored="true" />
+	<field name="property_address_register"   type="string"   indexed="true" stored="true" />
 	<field name="benign_tumor_hypertension_etc_register"   type="string"   indexed="true" stored="true" />
 	<field name="health_lead_has_a_marketplace_account_register"   type="string"   indexed="true" stored="true" />
 	<field name="ancilliary_multiple_sclerosis_memory_loss_etc_register"   type="string"   indexed="true" stored="true" />
@@ -471,15 +459,14 @@
 	<field name="auto_auto_priority_code_register"   type="string"   indexed="true" stored="true" />
 	<field name="purchase_amount_register"   type="string"   indexed="true" stored="true" />
 	<field name="spouse_last_name_register"   type="string"   indexed="true" stored="true" />
-	<field name="contact_info_phone_number_register"   type="string"   indexed="true" stored="true" />
+	<field name="phone_number_register"   type="string"   indexed="true" stored="true" />
 	<field name="health_total_income_used_on_application_register"   type="string"   indexed="true" stored="true" />
-	<field name="contact_info_partner_register"   type="string"   indexed="true" stored="true" />
+	<field name="partner_register"   type="string"   indexed="true" stored="true" />
 	<field name="property_city_register"   type="string"   indexed="true" stored="true" />
 	<field name="cell_phone_register"   type="string"   indexed="true" stored="true" />
 	<field name="ancilliary_disorder_disease_heart_kidney_lungs_register"   type="string"   indexed="true" stored="true" />
-	<field name="contact_info_auto_insurance_checkbox_register"   type="string"   indexed="true" stored="true" />
-	<field name="contact_info_life_insurance_checkbox_register"   type="string"   indexed="true" stored="true" />
-	<field name="child_4_social_register"   type="string"   indexed="true" stored="true" />
+	<field name="auto_insurance_checkbox_register"   type="string"   indexed="true" stored="true" />
+	<field name="life_insurance_checkbox_register"   type="string"   indexed="true" stored="true" />
 	<field name="life_term_life_policy_lenght_register"   type="string"   indexed="true" stored="true" />
 	<field name="life_after_changes_new_premium_register"   type="string"   indexed="true" stored="true" />
 	<field name="auto_presold_timestamp_register"   type="string"   indexed="true" stored="true" />
@@ -490,16 +477,15 @@
 	<field name="health_scrubber_register"   type="string"   indexed="true" stored="true" />
 	<field name="liability_company_name_register"   type="string"   indexed="true" stored="true" />
 	<field name="health_username_register"   type="string"   indexed="true" stored="true" />
-	<field name="contact_info_child_4_last_name_register"   type="string"   indexed="true" stored="true" />
+	<field name="child_4_last_name_register"   type="string"   indexed="true" stored="true" />
 	<field name="renewal_submitter_2016_register"   type="string"   indexed="true" stored="true" />
 	<field name="have_coverage_register"   type="string"   indexed="true" stored="true" />
-	<field name="contact_info_current_job_and_income_info_register"   type="string"   indexed="true" stored="true" />
+	<field name="current_job_and_income_info_register"   type="string"   indexed="true" stored="true" />
 	<field name="health_number_of_dependent_children_in_house_register"   type="string"   indexed="true" stored="true" />
 	<field name="auto_current_auto_premium_register"   type="string"   indexed="true" stored="true" />
 	<field name="vehicle_1_make_register"   type="string"   indexed="true" stored="true" />
 	<field name="health_application_number_2016_selection_register"   type="string"   indexed="true" stored="true" />
 	<field name="auto_payment_option_register"   type="string"   indexed="true" stored="true" />
-	<field name="state_register"   type="string"   indexed="true" stored="true" />
 	<field name="corrections_needed_register"   type="string"   indexed="true" stored="true" />
 	<field name="updated_plan_register"   type="string"   indexed="true" stored="true" />
 	<field name="quoted_auto_number_register"   type="string"   indexed="true" stored="true" />
@@ -524,7 +510,7 @@
 	<field name="dead_reason_register"   type="string"   indexed="true" stored="true" />
 	<field name="company_name_system_field_register"   type="string"   indexed="true" stored="true" />
 	<field name="country_register"   type="string"   indexed="true" stored="true" />
-	<field name="contact_info_found_in_search_accounts_register"   type="string"   indexed="true" stored="true" />
+	<field name="found_in_search_accounts_register"   type="string"   indexed="true" stored="true" />
 	<field name="home_quote_update_request_register"   type="string"   indexed="true" stored="true" />
 	<field name="payment_ccredit_card_type_register"   type="string"   indexed="true" stored="true" />
 	<field name="of_stories_in_the_building_register"   type="string"   indexed="true" stored="true" />
@@ -539,7 +525,7 @@
 	<field name="accident_elite_register"   type="string"   indexed="true" stored="true" />
 	<field name="cancer_register"   type="string"   indexed="true" stored="true" />
 	<field name="loan_register"   type="string"   indexed="true" stored="true" />
-	<field name="contact_info_paid_to_date_2016_register"   type="string"   indexed="true" stored="true" />
+	<field name="paid_to_date_2016_register"   type="string"   indexed="true" stored="true" />
 	<field name="spouse_social_register"   type="string"   indexed="true" stored="true" />
 	<field name="ancillary_bank_routing_number_register"   type="string"   indexed="true" stored="true" />
 	<field name="home_roof_material_register"   type="string"   indexed="true" stored="true" />
@@ -555,21 +541,18 @@
 	<field name="home_documents_needed_register"   type="string"   indexed="true" stored="true" />
 	<field name="dental_application_id_register"   type="string"   indexed="true" stored="true" />
 	<field name="auto_priority_code_register"   type="string"   indexed="true" stored="true" />
-	<field name="contact_info_child_4_dob_register"   type="string"   indexed="true" stored="true" />
+	<field name="child_4_dob_register"   type="string"   indexed="true" stored="true" />
 	<field name="website_register"   type="string"   indexed="true" stored="true" />
 	<field name="number_of_vehicles_register"   type="string"   indexed="true" stored="true" />
 	<field name="auto_vehicle_two_make_register"   type="string"   indexed="true" stored="true" />
 	<field name="do_you_have_medicaid_va_or_medicare_register"   type="string"   indexed="true" stored="true" />
-	<field name="child_2_social_register"   type="string"   indexed="true" stored="true" />
 	<field name="health_payment_error_timestamp_register"   type="string"   indexed="true" stored="true" />
 	<field name="type_of_dwelling_register"   type="string"   indexed="true" stored="true" />
-	<field name="child_4_gender_register"   type="string"   indexed="true" stored="true" />
 	<field name="quoted_renewal_gross_premium_2016_register"   type="string"   indexed="true" stored="true" />
 	<field name="p_and_c_referral_code_register"   type="string"   indexed="true" stored="true" />
 	<field name="auto_partner_register"   type="string"   indexed="true" stored="true" />
 	<field name="sourceip_register"   type="string"   indexed="true" stored="true" />
 	<field name="vehicle_3_vin_register"   type="string"   indexed="true" stored="true" />
-	<field name="contact_info_email_register"   type="string"   indexed="true" stored="true" />
 	<field name="ancillary_payment_option_register"   type="string"   indexed="true" stored="true" />
 	<field name="claim_2_damage_amount_register"   type="string"   indexed="true" stored="true" />
 	<field name="rc_n_register"   type="string"   indexed="true" stored="true" />
@@ -577,19 +560,17 @@
 	<field name="flood_insurance_company_register"   type="string"   indexed="true" stored="true" />
 	<field name="any_nonroutine_consultation_scheduled_register"   type="string"   indexed="true" stored="true" />
 	<field name="life_age_register"   type="string"   indexed="true" stored="true" />
-	<field name="contact_info_middle_name_register"   type="string"   indexed="true" stored="true" />
+	<field name="middle_name_register"   type="string"   indexed="true" stored="true" />
 	<field name="ancilliary_scrubber_register"   type="string"   indexed="true" stored="true" />
-	<field name="contact_info_last_modified_by_register"   type="string"   indexed="true" stored="true" />
+	<field name="last_modified_by_register"   type="string"   indexed="true" stored="true" />
 	<field name="current_net_premium_register"   type="string"   indexed="true" stored="true" />
 	<field name="ancillary_lead_status_register"   type="string"   indexed="true" stored="true" />
 	<field name="boat_policy_number_register"   type="string"   indexed="true" stored="true" />
-	<field name="contact_info_country_register"   type="string"   indexed="true" stored="true" />
 	<field name="spouse_yearly_income_register"   type="string"   indexed="true" stored="true" />
 	<field name="health_total_individual_income_register"   type="string"   indexed="true" stored="true" />
 	<field name="auto_vehicle_one_comp_ded_register"   type="string"   indexed="true" stored="true" />
 	<field name="renewal_scrubber_register"   type="string"   indexed="true" stored="true" />
 	<field name="medical_payments_register"   type="string"   indexed="true" stored="true" />
-	<field name="child_3_dob_register"   type="string"   indexed="true" stored="true" />
 	<field name="home_tentative_timestamp_register"   type="string"   indexed="true" stored="true" />
 	<field name="second_user_name_register"   type="string"   indexed="true" stored="true" />
 	<field name="health_primary_applicants_income_source_register"   type="string"   indexed="true" stored="true" />
@@ -611,7 +592,7 @@
 	<field name="type_of_current_coverage_register"   type="string"   indexed="true" stored="true" />
 	<field name="p_and_c_referral_source_register"   type="string"   indexed="true" stored="true" />
 	<field name="boat_premium_register"   type="string"   indexed="true" stored="true" />
-	<field name="contact_info_marital_status_register"   type="string"   indexed="true" stored="true" />
+	<field name="marital_status_register"   type="string"   indexed="true" stored="true" />
 	<field name="children_on_plan_2015_register"   type="string"   indexed="true" stored="true" />
 	<field name="heart_disease_register"   type="string"   indexed="true" stored="true" />
 	<field name="bathroms_2_register"   type="string"   indexed="true" stored="true" />
@@ -629,13 +610,13 @@
 	<field name="health_current_coverage_register"   type="string"   indexed="true" stored="true" />
 	<field name="other_policy_effective_date_register"   type="string"   indexed="true" stored="true" />
 	<field name="auto_quoted_auto_number_register"   type="string"   indexed="true" stored="true" />
-	<field name="contact_info_child_1_dob_register"   type="string"   indexed="true" stored="true" />
+	<field name="child_1_dob_register"   type="string"   indexed="true" stored="true" />
 	<field name="reviewed_register"   type="string"   indexed="true" stored="true" />
 	<field name="roof_material_register"   type="string"   indexed="true" stored="true" />
 	<field name="vehicle_1_collision_ded_register"   type="string"   indexed="true" stored="true" />
 	<field name="driver_2_license_register"   type="string"   indexed="true" stored="true" />
 	<field name="auto_insurance_policy_register"   type="string"   indexed="true" stored="true" />
-	<field name="contact_info_mailing_zipcode_register"   type="string"   indexed="true" stored="true" />
+	<field name="mailing_zipcode_register"   type="string"   indexed="true" stored="true" />
 	<field name="home_square_ft_under_air_register"   type="string"   indexed="true" stored="true" />
 	<field name="life_application_status_register"   type="string"   indexed="true" stored="true" />
 	<field name="property_address_different_register"   type="string"   indexed="true" stored="true" />
@@ -668,19 +649,18 @@
 	<field name="auto_current_auto_carrier_register"   type="string"   indexed="true" stored="true" />
 	<field name="ancilliary_accident_elite_notes_register"   type="string"   indexed="true" stored="true" />
 	<field name="mobile_or_manufactured_home_register"   type="string"   indexed="true" stored="true" />
-	<field name="contact_info_writing_agent_register"   type="string"   indexed="true" stored="true" />
+	<field name="writing_agent_register"   type="string"   indexed="true" stored="true" />
 	<field name="home_number_of_stories_in_the_building_register"   type="string"   indexed="true" stored="true" />
 	<field name="auto_documents_needed_register"   type="string"   indexed="true" stored="true" />
-	<field name="child_2_name_register"   type="string"   indexed="true" stored="true" />
 	<field name="bodily_injury_liability_register"   type="string"   indexed="true" stored="true" />
-	<field name="contact_info_mailing_city_register"   type="string"   indexed="true" stored="true" />
+	<field name="mailing_city_register"   type="string"   indexed="true" stored="true" />
 	<field name="dental_premium_2_register"   type="string"   indexed="true" stored="true" />
 	<field name="reason_for_purchasing_life_insurance_register"   type="string"   indexed="true" stored="true" />
 	<field name="quoted_renewal_subsidy_2016_register"   type="string"   indexed="true" stored="true" />
 	<field name="health_premium_2015_register"   type="string"   indexed="true" stored="true" />
 	<field name="health_premium_2014_register"   type="string"   indexed="true" stored="true" />
 	<field name="health_project_household_income_register"   type="string"   indexed="true" stored="true" />
-	<field name="contact_info_child_2_social_register"   type="string"   indexed="true" stored="true" />
+	<field name="child_2_social_register"   type="string"   indexed="true" stored="true" />
 	<field name="lead_name_register"   type="string"   indexed="true" stored="true" />
 	<field name="auto_medical_payments_register"   type="string"   indexed="true" stored="true" />
 	<field name="ae_presold_timestamp_register"   type="string"   indexed="true" stored="true" />
@@ -690,18 +670,16 @@
 	<field name="home_bankrupcy_or_Foreclosure_in_the_past_five_years_register"   type="string"   indexed="true" stored="true" />
 	<field name="first_name_register"   type="string"   indexed="true" stored="true" />
 	<field name="property_damage_register"   type="string"   indexed="true" stored="true" />
-	<field name="contact_info_renew_as_is_email_received_register"   type="string"   indexed="true" stored="true" />
-	<field name="contact_info_zip_code_register"   type="string"   indexed="true" stored="true" />
+	<field name="renew_as_is_email_received_register"   type="string"   indexed="true" stored="true" />
 	<field name="auto_insurance_carrier_register"   type="string"   indexed="true" stored="true" />
 	<field name="vehicle_2_model_register"   type="string"   indexed="true" stored="true" />
 	<field name="flood_payment_type_register"   type="string"   indexed="true" stored="true" />
 	<field name="contact_comment_register"   type="string"   indexed="true" stored="true" />
-	<field name="contact_info_child_1_name_register"   type="string"   indexed="true" stored="true" />
+	<field name="child_1_name_register"   type="string"   indexed="true" stored="true" />
 	<field name="health_enrolledpaid_timestamp_register"   type="string"   indexed="true" stored="true" />
 	<field name="ancilliary_accident_elite_request_eff_date_register"   type="string"   indexed="true" stored="true" />
 	<field name="umbrella_effective_date_register"   type="string"   indexed="true" stored="true" />
 	<field name="motorcycle_lead_status_register"   type="string"   indexed="true" stored="true" />
-	<field name="phone_number_register"   type="string"   indexed="true" stored="true" />
 	<field name="occupancy_status_register"   type="string"   indexed="true" stored="true" />
 	<field name="who_has_medicaid_or_medicare_3_register"   type="string"   indexed="true" stored="true" />
 	<field name="flood_writing_agent_register"   type="string"   indexed="true" stored="true" />
@@ -725,8 +703,6 @@
 	<field name="dependent_state_of_birth_register"   type="string"   indexed="true" stored="true" />
 	<field name="auto_writing_agent_register"   type="string"   indexed="true" stored="true" />
 	<field name="payment_bank_account_type_register"   type="string"   indexed="true" stored="true" />
-	<field name="child_3_gender_register"   type="string"   indexed="true" stored="true" />
-	<field name="other_policy_sold_register"   type="string"   indexed="true" stored="true" />
 	<field name="life_application_declined_reason_register"   type="string"   indexed="true" stored="true" />
 	<field name="auto_insurance_policy_number_register"   type="string"   indexed="true" stored="true" />
 	<field name="child_3_income_register"   type="string"   indexed="true" stored="true" />
@@ -743,28 +719,25 @@
 	<field name="ancilliary_critical_care_notes_register"   type="string"   indexed="true" stored="true" />
 	<field name="voicemail_received_register"   type="string"   indexed="true" stored="true" />
 	<field name="spouse_employers_phone_number_register"   type="string"   indexed="true" stored="true" />
-	<field name="property_address_register"   type="string"   indexed="true" stored="true" />
 	<field name="life_convicted_of_drunk_driving_register"   type="string"   indexed="true" stored="true" />
 	<field name="term_life_policy_length_register"   type="string"   indexed="true" stored="true" />
 	<field name="primary_applicants_employers_name_register"   type="string"   indexed="true" stored="true" />
-	<field name="contact_info_child_2_gender_register"   type="string"   indexed="true" stored="true" />
 	<field name="uninsured_looking_for_new_coverage_register"   type="string"   indexed="true" stored="true" />
 	<field name="vehicle_2_vin_register"   type="string"   indexed="true" stored="true" />
 	<field name="drivers_license_number_register"   type="string"   indexed="true" stored="true" />
 	<field name="payment_cc_expiration_date_register"   type="string"   indexed="true" stored="true" />
 	<field name="child_4_name_register"   type="string"   indexed="true" stored="true" />
-	<field name="stories_register"   type="string"   indexed="true" stored="true" />
 	<field name="weight_register"   type="string"   indexed="true" stored="true" />
 	<field name="diagnosed_or_treated_for_medical_issues_register"   type="string"   indexed="true" stored="true" />
-	<field name="contact_info_verification_documents_submitted_date_register"   type="string"   indexed="true" stored="true" />
+	<field name="verification_documents_submitted_date_register"   type="string"   indexed="true" stored="true" />
 	<field name="motorcycle_documents_needed_register"   type="string"   indexed="true" stored="true" />
 	<field name="year_built_register"   type="string"   indexed="true" stored="true" />
 	<field name="health_plan_2014_register"   type="string"   indexed="true" stored="true" />
 	<field name="health_plan_2015_register"   type="string"   indexed="true" stored="true" />
 	<field name="health_quoted_renewal_subsidy_2016_register"   type="string"   indexed="true" stored="true" />
 	<field name="spouse_do_you_have_a_social_security_number_register"   type="string"   indexed="true" stored="true" />
-	<field name="contact_info_child_4_social_register"   type="string"   indexed="true" stored="true" />
-	<field name="contact_info_employment_status_register"   type="string"   indexed="true" stored="true" />
+	<field name="child_4_social_register"   type="string"   indexed="true" stored="true" />
+	<field name="employment_status_register"   type="string"   indexed="true" stored="true" />
 	<field name="driver_4_license_number_register"   type="string"   indexed="true" stored="true" />
 	<field name="child_2_income_register"   type="string"   indexed="true" stored="true" />
 	<field name="current_home_premium_register"   type="string"   indexed="true" stored="true" />
@@ -776,7 +749,7 @@
 	<field name="home_writing_agent_register"   type="string"   indexed="true" stored="true" />
 	<field name="dependents_register"   type="string"   indexed="true" stored="true" />
 	<field name="fence_or_screen_enclosure_register"   type="string"   indexed="true" stored="true" />
-	<field name="contact_info_tcpa_compliant_register"   type="string"   indexed="true" stored="true" />
+	<field name="tcpa_compliant_register"   type="string"   indexed="true" stored="true" />
 	<field name="multiple_sclerosis_memory_loss_etc_register"   type="string"   indexed="true" stored="true" />
 	<field name="vehicle_2_comp_ded_register"   type="string"   indexed="true" stored="true" />
 	<field name="home_current_home_premium_register"   type="string"   indexed="true" stored="true" />
@@ -793,7 +766,7 @@
 	<field name="ancilliary_hospitalized_in_the_last_twelve_months_register"   type="string"   indexed="true" stored="true" />
 	<field name="home_bound_timestamp_register"   type="string"   indexed="true" stored="true" />
 	<field name="spouse_old_register"   type="string"   indexed="true" stored="true" />
-	<field name="contact_info_child_1_first_name_register"   type="string"   indexed="true" stored="true" />
+	<field name="child_1_first_name_register"   type="string"   indexed="true" stored="true" />
 	<field name="child_4_income_register"   type="string"   indexed="true" stored="true" />
 	<field name="flood_zone_register"   type="string"   indexed="true" stored="true" />
 	<field name="home_quoted_home_premium_register"   type="string"   indexed="true" stored="true" />
@@ -807,7 +780,7 @@
 	<field name="income_verification_needed_register"   type="string"   indexed="true" stored="true" />
 	<field name="motorcycle_company_register"   type="string"   indexed="true" stored="true" />
 	<field name="boat_documents_needed_register"   type="string"   indexed="true" stored="true" />
-	<field name="contact_info_child_3_social_register"   type="string"   indexed="true" stored="true" />
+	<field name="child_3_social_register"   type="string"   indexed="true" stored="true" />
 	<field name="script_team_4_iss_existing_leads_register"   type="string"   indexed="true" stored="true" />
 	<field name="life_major_health_issues_in_relatives_register"   type="string"   indexed="true" stored="true" />
 	<field name="pool_register"   type="string"   indexed="true" stored="true" />
@@ -823,7 +796,7 @@
 	<field name="signature_last_name_register"   type="string"   indexed="true" stored="true" />
 	<field name="driver_1_license_register"   type="string"   indexed="true" stored="true" />
 	<field name="have_you_recently_gained_us_citizenship_register"   type="string"   indexed="true" stored="true" />
-	<field name="contact_info_other_policy_sold_register"   type="string"   indexed="true" stored="true" />
+	<field name="other_policy_sold_register"   type="string"   indexed="true" stored="true" />
 	<field name="other_phone_2_register"   type="string"   indexed="true" stored="true" />
 	<field name="ancilliary_writing_agent_register"   type="string"   indexed="true" stored="true" />
 	<field name="life_application_id_register"   type="string"   indexed="true" stored="true" />

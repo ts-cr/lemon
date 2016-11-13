@@ -1,2 +1,2 @@
 memcached:
-    memcache_host: 172.31.39.29
+    memcache_host: 172.31.23.25

@@ -41,7 +41,7 @@ DBNAME="{{ salt['pillar.get']('kamailio:settings:dbname') }}"
 # DBROPW="kamailioro"
 
 ## database access host (from where is kamctl used)
-# DBACCESSHOST=172.31.47.69
+# DBACCESSHOST=172.31.23.26
 
 ## database super user (for ORACLE this is 'scheme-creator' user)
 DBROOTUSER="{{ salt['pillar.get']('kamailio:settings:dbrootuser') }}"

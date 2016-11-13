@@ -1,0 +1,15 @@
+tornado
+pylibmc
+riak
+motor
+schematics
+psycopg2
+queries
+pyzmq
+arrow
+pycurl
+ujson
+xmltodict
+requests
+zeep
+lxml

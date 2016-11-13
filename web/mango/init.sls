@@ -1,9 +1,8 @@
 include:
     - requirements
 
-/home/overlord/venv/mango:
+/opt/venv/mango:
     virtualenv.managed:
-        - user: overlord
         - requirements: salt://mango/requirements.txt
         - require:
             - pkg: python-dev
@@ -15,6 +14,6 @@ include:
 mango-project:
   git.latest:
     - name: https://github.com/iofun/mango.git
-    - target: /home/overlord/mango
+    - target: /opt/mango
     - rev: master
-    - user: overlord
+    

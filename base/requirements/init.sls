@@ -1,5 +1,5 @@
 {% set kernel_release = salt['grains.get']('kernelrelease', '') %}
-
+  
 packages:
     pkg.installed:
         - names:
@@ -16,11 +16,12 @@ packages:
             - libopencv-core-dev
             - libopencv-highgui-dev
             - libsnappy-dev
-            - libsnappy1
+            - libsnappy1v5
+            - libatlas3-base
             - libatlas-base-dev
             - libstdc++6-4.8-dbg
-            - libgoogle-glog0
             - libgoogle-glog-dev
+            - libgoogle-glog0v5
             - libgflags-dev
             - liblmdb-dev
             - python-pip
@@ -40,6 +41,7 @@ packages:
             - libffi-dev
             - libyaml-dev
             - libssl-dev
+            - unzip
             - htop
             - less
             - screen

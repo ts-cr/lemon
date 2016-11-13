@@ -1,10 +1,27 @@
-# nonsense.ws common knowledge machine
+# cloudforest.ws schematic tree
 
+# remember to use multiples of 8 as salt.masters !
+
+# 8 node, 80 cluster, 480 cube, 4800 cloud, 480000 forest.
 
 base:
 
     '*':
+        - user
         - requirements
+        - statsite
+        - circus
+        - circus.statsite
+        - lemon
+        - salt
+        - monit
+        - exim
+        - serf
+        - slurm
+        - collectd
+        - certbot
+        - consul
+        - telegraf
         - python
         - erlang
         - erlang.rebar
@@ -12,76 +29,66 @@ base:
         - lua.rocks
         - lua.fair
         - lua.cortex
-        - salt
-        - exim
+        - rkt
         - zsh
-        - user
-        - lemon
-
+        - go
 
 ai:
-    ai_overlords_1:
-        - match: nodegroup
-        - monit
-        - cudnn
-        - crontab
+
+    # torch, theano and tensorflow services.
 
     ai_imps_1:
         - match: nodegroup
-        - monit
+        - salt.master
         - cudnn
+        - rcuda
+        - crontab
 
+    ai_imps_2:
+        - match: nodegroup
+        - cudnn
+        - rcuda
 
 data:
 
-    data_overlords_1:
+    # huge amounts of label data.
+
+    data_imps_1:
         - match: nodegroup
+        - salt.master
         - postgresql
         - riak
         - riak.schemas
         - asterisk
+        - graphite
+        - kong
         - turndb
-        - monit
+        - consul.server
+        - circus.consul-server
         - monit.postgresql
         - monit.riak
         - crontab
 
-    data_imps_1:
+    data_imps_2:
         - match: nodegroup
         - mongodb
+        - mysql
+        - cockroach
+        - influxdb
         - memcached
-        - monit
+        - consul.bootstrap
+        - circus.consul-bootstrap
+        - circus.cockroach-26257
         - monit.mongodb
         - monit.memcached
 
-    data_imps_2:
-        - match: nodegroup
-        - monit
-
-    data_imps_3:
-        - match: nodegroup
-        - monit
-
-    data_imps_4:
-        - match: nodegroup
-        - monit
-
-    data_imps_5:
-        - match: nodegroup
-        - monit
-
-    data_imps_6:
-        - match: nodegroup
-        - monit
-
-    data_imps_7:
-        - match: nodegroup
-        - monit
-
-
 rtc:
-    rtc_overlords_1:
+
+    # real-time communications.
+
+    rtc_imps_1:
         - match: nodegroup
+        - salt.master
         - odbc
         - sngrep
         - kamailio
@@ -90,12 +97,11 @@ rtc:
         - kamailio.letsencrypt
         - rtpengine
         - rtpengine.config
-        - monit
         - monit.kamailio
         - monit.rtpengine
         - crontab
 
-    rtc_imps_1:
+    rtc_imps_2:
         - match: nodegroup
         - sngrep
         - asterisk
@@ -109,14 +115,11 @@ rtc:
         - odbc
         - fail2ban
         - starfruit
-        - supervisor
-        - supervisor.starfruit-3888
-        - supervisor.obelix
-        - monit
-        - monit.supervisor
+        - circus.starfruit-3888
+        - circus.obelix
         - monit.asterisk
 
-    rtc_imps_2:
+    rtc_imps_3:
         - match: nodegroup
         - sngrep
         - freeswitch
@@ -124,22 +127,19 @@ rtc:
         - freeswitch.samples
         - freeswitch.config
         - freeswitch.godzilla
-        - monit
         - monit.freeswitch
 
-    rtc_imps_3:
+    rtc_imps_4:
         - match: nodegroup
         - odbc
         - coturn
         - coturn.config
-        - firestarter
-        - firestarter.config
-        - supervisor
-        - supervisor.firestarter-8349
-        - monit
+        - fire2ice
+        - fire2ice.config
+        - circus.firestarter-8349
         - monit.coturn
 
-    rtc_imps_4:
+    rtc_imps_5:
         - match: nodegroup
         - sngrep
         - asterisk
@@ -153,92 +153,62 @@ rtc:
         - odbc
         - fail2ban
         - starfruit
-        - supervisor
-        - supervisor.starfruit-3888
-        - supervisor.obelix
-        - monit
-        - monit.supervisor
+        - circus.starfruit-3888
+        - circus.obelix
+        - monit.circus
         - monit.asterisk
 
-    rtc_imps_5:
-        - match: nodegroup
-        - monit
-
-    rtc_imps_6:
-        - match: nodegroup
-        - monit
-
-    rtc_imps_7:
-        - match: nodegroup
-        - monit
-
-
 web:
-    web_overlords_1:
+
+    # nonsense web services.
+
+    web_imps_1:
         - match: nodegroup
+        - crontab
+        - salt.master
+        - consul.agent
+        - circus.carbon-server
+        - circus.consul-agent
+        - circus.treehouse-8002        
+        - circus.spider-8003
+        - circus.howler-8004
+        - circus.grapes-8005
+        - circus.extractor-8006
+        - circus.graphite-8088
+        - circus.cebus-8538
+        - circus.simon-8539
+        - circus.mango-8888
+        - consul.dashboard
+        - javascript
         - treehouse
         - simon
         - cebus
-        - overlord
-        - mango
-        - supervisor
-        - supervisor.treehouse-8222
-        - supervisor.treehouse-8444
-        - supervisor.treehouse-8666
-        - supervisor.mango-8000
-        - supervisor.howler-8001
-        - supervisor.spider-8003
-        - supervisor.fiorella-8004
-        - supervisor.overlord-8888
-        - supervisor.cebus-8538
-        - supervisor.simon-8539
-        - toronja
-        - nonsense
-        - chaos
-        - erebus
-        - nyx
-        - somnus
-        - howler
-        - grape
-        - sparta
         - spider
-        - nginx
-        - nginx.openresty
-        - nginx.nonsense
-        - nginx.iofun
-        - nginx.codemachine
-        - nginx.spartanapproach
-        - haproxy
-        - monit
-        - monit.nginx
-        - monit.haproxy
+        - howler
+        - mango
+        - grapes
+        - graphite
+        - graphite.grafana
+        - grapefruit      
+        - extractor
         - moon
-        - crontab
-        
-    web_imps_1:
-        - match: nodegroup
-        - monit
-
-    web_imps_2:
-        - match: nodegroup
-        - monit
-
-    web_imps_3:
-        - match: nodegroup
-        - monit
-
-    web_imps_4:
-        - match: nodegroup
-        - monit
-
-    web_imps_5:
-        - match: nodegroup
-        - monit
-
-    web_imps_6:
-        - match: nodegroup
-        - monit
-
-    web_imps_7:
-        - match: nodegroup
-        - monit
+        - nginx
+        - nginx.kong
+        - nginx.openresty
+        - nginx.sites.nonsense
+        - nginx.sites.iofun
+        - nginx.sites.spartanapproach
+        - nginx.sites.techsupport
+        - nginx.sites.codemachine
+        - nginx.sites.shaos
+        - nginx.sites.cloudforest
+        - collectd.nginx
+        - monit.nginx
+        - monit.kong
+        - sites.iofun
+        - sites.cloudforest
+        - sites.underworld
+        - sites.shaos
+        - sites.nonsense
+        - sites.gigatech
+        - sites.codemachine

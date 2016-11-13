@@ -1,9 +1,9 @@
 include:
     - requirements
 
-/home/overlord/venv/treehouse:
+/opt/venv/treehouse:
     virtualenv.managed:
-        - user: overlord
+
         - requirements: salt://treehouse/requirements.txt
         - require:
             - pkg: python-dev
@@ -15,6 +15,13 @@ include:
 treehouse-project:
   git.latest:
     - name: https://github.com/iofun/treehouse.git
-    - target: /home/overlord/treehouse
+    - target: /opt/treehouse
     - rev: master
-    - user: overlord
+
+build treehouse:
+    cmd.run:
+        - name: "make all"
+        - cwd: /opt/treehouse/
+        - user: root
+        - require:
+            - git: treehouse-project

@@ -1,6 +1,6 @@
 
 # Hello there, remember that pillars are like the trajan column.
-# here you store static configuration that later is read by all your overlords and imps.
+# here you store static configuration that later is read by all your imps.
 
 base:
 
@@ -9,36 +9,22 @@ base:
 
 data:
 
-    data_overlords_1:
+    data_imps_1:
         - match: nodegroup
         - postgresql
         - riak
 
-    data_imps_1:
+    data_imps_2:
         - match: nodegroup
         - memcached
         - mongodb
 
-    data_imps_2:
-        - match: nodegroup
-        - monit
-
-
 rtc:
-
-    rtc_overlords_1:
-        - match: nodegroup
-        - kamailio
-        - rtpengine
-        - odbc
 
     rtc_imps_1:
         - match: nodegroup
-        - asterisk
-        - obelix
-        - starfruit
-        - freeswitch
-        - coturn
+        - kamailio
+        - rtpengine
         - odbc
 
     rtc_imps_2:
@@ -56,7 +42,6 @@ rtc:
         - obelix
         - starfruit
         - freeswitch
-        - firestarter
         - coturn
         - odbc
 
@@ -66,6 +51,7 @@ rtc:
         - obelix
         - starfruit
         - freeswitch
+        - firestarter
         - coturn
         - odbc
 
@@ -78,31 +64,15 @@ rtc:
         - coturn
         - odbc
 
-    rtc_imps_6:
-        - match: nodegroup
-        - asterisk
-        - obelix
-        - starfruit
-        - freeswitch
-        - coturn
-        - odbc
-
-    rtc_imps_7:
-        - match: nodegroup
-        - asterisk
-        - obelix
-        - starfruit
-        - freeswitch
-        - coturn
-        - odbc
-
 web:
 
-    web_overlords_1:
+    web_imps_1:
         - match: nodegroup
         - mango
+        - grapes
         - treehouse
         - extractor
+        - graphite
         - overlord
         - cebus
         - simon
@@ -110,18 +80,10 @@ web:
         - spider
         - nginx
         - supervisor
-        
-    web_imps_1:
-        - match: nodegroup
-        - nginx
-
-    web_imps_2:
-        - match: nodegroup
-        - supervisor
 
 ai:
-    ai_overlords_1:
+    ai_imps_1:
         - match: nodegroup
 
-    ai_imps_1:
+    ai_imps_2:
         - match: nodegroup

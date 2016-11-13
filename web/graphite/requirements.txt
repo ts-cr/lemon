@@ -1,0 +1,4 @@
+https://github.com/graphite-project/whisper/tarball/master
+https://github.com/graphite-project/carbon/tarball/master
+https://github.com/graphite-project/graphite-web/tarball/master
+psycopg2

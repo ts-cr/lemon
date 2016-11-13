@@ -17,11 +17,6 @@ luarocks autograd:
         - name: "luarocks install autograd && echo 'true' > /srv/cortex-autograd" 
         - unless: "cat /srv/cortex-autograd"
 
-luarocks thrift:
-    cmd.run: 
-        - name: "luarocks install thrift && echo 'true' > /srv/cortex-thrift" 
-        - unless: "cat /srv/cortex-thrift"
-
 luarocks ipc:
     cmd.run: 
         - name: "luarocks install ipc && echo 'true' > /srv/cortex-ipc" 

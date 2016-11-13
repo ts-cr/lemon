@@ -1,11 +1,9 @@
-/home/overlord/moon:
+/opt/moon:
   file.directory:
-    - user:  overlord
-    - name:  /home/overlord/moon
-    - group: overlord
+    - name:  /opt/moon
 
 moon/upload.lua:
     file.managed:
-        - name: /home/overlord/moon/upload.lua
+        - name: /opt/moon/upload.lua
         - source: salt://moon/source/upload.lua
         - template: jinja

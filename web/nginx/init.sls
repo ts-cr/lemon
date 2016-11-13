@@ -1,3 +1,6 @@
+nginx:
+    user.present
+
 /etc/nginx/nginx.conf:
   file:
     - managed
@@ -7,8 +10,24 @@
     - group: root
     - mode: 644
 
-nginx:
-  service:
-    - running
-    - watch:
-      - file: /etc/nginx/nginx.conf
+/etc/nginx/conf.d:
+    file.directory:
+        - user: www-data
+        - group: www-data
+        - recurse:
+            - user
+            - group
+
+nginx-sysvinit:
+  git.latest:
+    - name: https://github.com/iofun/nginx-sysvinit-script.git
+    - target: /usr/src/nginx-sysvinit
+    - rev: master
+
+make nginx-sysvinit:
+    cmd.run: 
+        - name: "make"
+        - user: root
+        - cwd: /usr/src/nginx-sysvinit/
+        - require:
+            - git: nginx-sysvinit

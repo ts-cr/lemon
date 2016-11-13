@@ -1,9 +1,9 @@
 include:
     - requirements
 
-/home/overlord/venv/simon:
+/opt/venv/simon:
     virtualenv.managed:
-        - user: overlord
+
         - requirements: salt://simon/requirements.txt
         - require:
             - pkg: python-dev
@@ -15,6 +15,6 @@ include:
 simon-project:
   git.latest:
     - name: https://github.com/iofun/simon.git
-    - target: /home/overlord/simon
+    - target: /opt/simon
     - rev: master
-    - user: overlord
+    

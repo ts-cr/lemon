@@ -1,6 +1,6 @@
 cebus:
-    mongo_host: 172.31.39.29
-    sql_host: 172.31.47.69
-    memcached_host: 172.31.39.29
+    mongo_host: 172.31.23.25
+    sql_host: 172.31.23.26
+    memcached_host: 172.31.23.25
     cache_enabled: True
-    riak_host: 172.31.47.69
+    riak_host: 172.31.23.26

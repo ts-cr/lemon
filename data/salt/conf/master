@@ -1,0 +1,42 @@
+# Primary configuration settings
+
+# This configuration file is used to manage the behavior of the Lemon & Salt
+# Values that are commented out but have no space after the comment are
+# defaults that need not be set in the config. If there is a space after the
+# comment that the value is presented as an example and is not the default.
+
+# Per default, the master will automatically include all config files
+# from master.d/*.conf (master.d is a directory in the same directory
+# as the main master config file)
+#default_include: master.d/*.conf
+
+# The address of the interface to bind to
+interface: 0.0.0.0
+
+# example stuff from your friends of code machine and nonsense worlds.
+
+file_roots:
+  base:
+    - /srv/salt/base/
+  data:
+    - /srv/salt/data/
+  web:
+    - /srv/salt/web/
+  rtc:
+    - /srv/salt/rtc/
+
+pillar_roots:
+  base:
+    - /srv/salt/pillar/
+  data:
+    - /srv/salt/pillar/data/
+  web:
+    - /srv/salt/pillar/web/
+  rtc:
+    - /srv/salt/pillar/rtc/
+
+# node on ips and private networks, please use the configuration that we got from lxc.
+nodegroups:
+    rtc_imps_1:  'S@172.31.22.213'
+    web_imps_1:  'S@172.31.36.130'
+    data_imps_1:  'S@172.31.32.40'

@@ -1,8 +1,8 @@
 salt:
   pkgrepo.managed:
-    - name: deb http://ppa.launchpad.net/saltstack/salt/ubuntu trusty main
+    - name: deb http://repo.saltstack.com/apt/ubuntu/16.04/amd64/latest xenial main
     - file: /etc/apt/sources.list.d/salt.list
-    - key_url: http://keyserver.ubuntu.com:11371/pks/lookup?op=get&search=0x4759FA960E27C0A6
+    - key_url: https://repo.saltstack.com/apt/ubuntu/16.04/amd64/latest/SALTSTACK-GPG-KEY.pub
     - require_in:
       - pkg: salt-minion
 

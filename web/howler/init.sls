@@ -1,9 +1,9 @@
 include:
     - requirements
 
-/home/overlord/venv/howler:
+/opt/venv/howler:
     virtualenv.managed:
-        - user: overlord
+
         - requirements: salt://howler/requirements.txt
         - require:
             - pkg: python-dev
@@ -13,13 +13,13 @@ include:
 howler-project:
   git.latest:
     - name: https://github.com/iofun/howler.git
-    - target: /home/overlord/howler
+    - target: /opt/howler
     - rev: master
-    - user: overlord
+    
 
 howler set-upstream:
     cmd.run: 
         - name: "git branch --set-upstream-to origin/master"
-        - cwd: /home/overlord/howler/
+        - cwd: /opt/howler/
         - require:
             - git: howler-project

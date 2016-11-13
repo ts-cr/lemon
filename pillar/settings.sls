@@ -1,4 +1,7 @@
-
-cube_master_hostname: 'cubes.iofun.io'
-cube_info: 'some basic info about the cube'
-cube_description: 'the story of this cube'
+imp_hostname: 'imp.nonsense.ws'
+pot_hostname: 'pot.nonsense.ws'
+sip_hostname: 'sip.nonsense.ws'
+cloud_hostname: 'cloudforest.ws'
+treehouse_hostname: 'kame.shaos.ws'
+consul_hostname: 'consul.shaos.ws'
+circus_hostname: 'circus.shaos.ws'

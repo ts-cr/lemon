@@ -27,7 +27,7 @@ local form, err = upload:new(chunk_size)
 
 -- report the upload to another process by message passing. 
 
-publisher:connect("tcp://msg.nonsense.ws:8132")
+publisher:connect("tcp://treehouse.nonsense.ws:5813")
 
 if not form then
     ngx.log(ngx.ERR, "failed to new upload: ", err)

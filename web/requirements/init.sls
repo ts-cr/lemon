@@ -1,11 +1,13 @@
 {% set kernel_release = salt['grains.get']('kernelrelease', '') %}
 
-data required packages:
+node required packages:
     pkg.installed:
         - names:
             - build-essential
             - libssl-dev
             - python-dev
+            - libffi-dev
+            - libcairo2-dev
             - linux-headers-{{ kernel_release }}
             - uuid-dev
             - uuid
@@ -21,7 +23,7 @@ mango required packages:
             - python-dev
             - python-pip
             - libatlas-dev
-            - libatlas3gf-base
+            - libatlas3-base
             - libpng12-dev
             - libfreetype6
             - libfreetype6-dev

@@ -1,9 +1,9 @@
 include:
     - requirements
 
-/home/overlord/venv/spider:
+/opt/venv/spider:
     virtualenv.managed:
-        - user: overlord
+
         - requirements: salt://spider/requirements.txt
         - require:
             - pkg: python-dev
@@ -13,13 +13,13 @@ include:
 spider-project:
   git.latest:
     - name: https://github.com/iofun/spider.git
-    - target: /home/overlord/spider
+    - target: /opt/spider
     - rev: master
-    - user: overlord
+    
 
 spider set-upstream:
     cmd.run: 
         - name: "git branch --set-upstream-to origin/master"
-        - cwd: /home/overlord/spider/
+        - cwd: /opt/spider/
         - require:
             - git: spider-project

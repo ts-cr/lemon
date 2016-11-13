@@ -1,0 +1,26 @@
+# Primary configuration settings
+
+# Per default, the master will automatically include all config files
+# from master.d/*.conf (master.d is a directory in the same directory
+# as the main master config file)
+default_include: master.d/*.conf
+
+# The address of the interface to bind to
+interface: {{ proxy_ip }}
+
+# example stuff from your friends of code machine and nonsense worlds.
+
+file_roots:
+  base:
+    - /srv/salt/base/
+  web:
+    - /srv/salt/web/
+
+pillar_roots:
+  base:
+    - /srv/salt/pillar/
+  web:
+    - /srv/salt/pillar/web/
+
+nodegroups:
+    web_imps_1:  'S@{{ proxy_ip }}'

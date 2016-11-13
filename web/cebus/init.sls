@@ -1,9 +1,9 @@
 include:
     - requirements
 
-/home/overlord/venv/cebus:
+/opt/venv/cebus:
     virtualenv.managed:
-        - user: overlord
+
         - requirements: salt://cebus/requirements.txt
         - require:
             - pkg: python-dev
@@ -15,6 +15,6 @@ include:
 cebus-project:
   git.latest:
     - name: https://github.com/iofun/cebus.git
-    - target: /home/overlord/cebus
+    - target: /opt/cebus
     - rev: master
-    - user: overlord
+    
